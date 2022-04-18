@@ -1,41 +1,8 @@
-# SE577-App (se577-architecture-demo)
+SE577-SoftwareArchitecture
+Greetings fellow developer my name is Adit Patel. I am currently a software engineer working for the NDW Teradata DBA Team. I really want to be expand my front end skillsets and delve into vue.js this term.
 
-Architecture demonstration project
+I would also like to attempt to use my environmental and developer skillsets to make my project environmental themed.
 
-## Install the dependencies
-```bash
-yarn
-# or
-npm install
-```
+My motivation and drive for programming stems from my understanding that technology is the key to helping society become more sustainable.
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
-```bash
-quasar dev
-```
-
-
-### Lint the files
-```bash
-yarn lint
-# or
-npm run lint
-```
-
-
-### Format the files
-```bash
-yarn format
-# or
-npm run format
-```
-
-
-
-### Build the app for production
-```bash
-quasar build
-```
-
-### Customize the configuration
-See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-webpack/quasar-config-js).
+My calling is to help utilize my skill sets to serve as a driver of change.
