@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  gowebservice:
+    image: 'architecting-software/bc-service-go'
+    ports:
+      - '5095:9095'
+  nodewebservice:
+    image: 'architecting-software/bc-service-node-fastify'
+    ports:
+      - '5094:9094'
+  webserver:
+    image: 'architecting-software/se577-demo-app'
+    ports:
+      - '5080:9080'

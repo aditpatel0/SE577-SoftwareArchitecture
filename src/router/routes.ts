@@ -19,14 +19,19 @@ const routes: RouteRecordRaw[] = [
         path: '/props',
         component: () => import('pages/AppPages/PropsPage.vue'),
       },
+      {
+        path: '/simple_state',
+        component: () => import('pages/AppPages/StatePage.vue'),
+      },
+      {
+        path: '/bc_demo',
+        component: () => import('pages/AppPages/BCPage.vue'),
+      },
+      {
+        path: '/gh_demo',
+        component: () => import('pages/AppPages/GHPage.vue'),
+      },
     ],
-  },
-
-  // Always leave this as last one,
-  // but you can also remove it
-  {
-    path: '/:catchAll(.*)*',
-    component: () => import('pages/ErrorNotFound.vue'),
   },
 ];
 

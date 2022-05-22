@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <q-card class="my-card">
     <q-card-section>
       <div class="text-h6">Our Changing Planet - {{ title }}</div>
@@ -23,5 +23,5 @@ export default defineComponent({
 });
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+Add "scoped" attribute to limit CSS to this component only -->
 <style scoped></style>

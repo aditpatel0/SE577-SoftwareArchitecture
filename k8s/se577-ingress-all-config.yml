@@ -1,0 +1,41 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: se577-ui-ingress
+  annotations:
+    #We will see how this helps with routing apis via being able to rewrite the url not to pass
+    #unnecessary prfix to the api itself
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+  namespace: default
+spec:
+  rules:
+    - http:
+        paths:
+          - pathType: Prefix
+            path: '/(|$)(.*)'
+            backend:
+              service:
+                name: se577-web-ui-svc
+                port:
+                  number: 9080
+          - pathType: Prefix
+            #                                                   $1    $2
+            #some regular expression stuff.  Key thing is the (....)(....) these become
+            # $1 and $2 parameters to get passed down stream.  Notice from the top
+            # we are passing $2 so this will match /api/go, then $1 will capture the /
+            # then $2 will foward all of the remainder to the downstream service
+            #
+            #THIS IS JUST FOR TESTING
+            path: '/api/go(/|$)(.*)'
+            backend:
+              service:
+                name: se577-go-api-svc
+                port:
+                  number: 9095
+          - pathType: Prefix
+            path: '/api/ff(/|$)(.*)'
+            backend:
+              service:
+                name: se577-fastify-api-svc
+                port:
+                  number: 9094
