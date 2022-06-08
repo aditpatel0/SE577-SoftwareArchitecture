@@ -6,4 +6,4 @@ RUN cargo install --path .
 FROM debian:buster-slim
 COPY --from=builder /usr/local/cargo/bin/Architecture-server /usr/local/bin/Architecture-server
 COPY ./resources/repositories.yaml /usr/local/bin/repositories.yaml
-CMD ["se577-server", "/usr/local/bin/repositories.yaml"]
+CMD ["Architecture-server", "/usr/local/bin/repositories.yaml"]
