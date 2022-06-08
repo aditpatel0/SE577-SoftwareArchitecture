@@ -1,3 +1,5 @@
+
+
 Requirements that must be present to run this application:
 
 1. Node/Npm installed
@@ -18,9 +20,16 @@ Please run  $ ./build.sh
 
 Please run $ ./run.sh <PLEASE_INSERT_TOKEN_HERE>
 
-
 Architecture Model:
 Please view png called arcitecture model.
 
-Thoughts on this application:
+Decisions that were made:
+Authentication using personal access token due to the simplicity of this application a more involved OAuth was not required.
+RUST is being utilized (for deeper dive into my thought process read Projectrelease3) This helps control the APIS in this the application.
+
+Attributes of this application include:
+This application is contained with its seperate front-end/backend set up.
+This application communicates with github gists api.
+It will allow users to view an individual's gists.
+It also allows uers to list branches of the respository.
 
