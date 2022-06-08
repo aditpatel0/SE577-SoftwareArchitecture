@@ -8,8 +8,6 @@ It really was fascnitating understanding how tokens are used to access data, and
 I do see a bit of a disadvange when it comes to Outh because if you are connected to one central hub, it leads to a high risk of getting hacked causing a snowball effect. Each stage should have its own authentication.
 
 
-
-
 Requirements that must be present to run this application:
 
 1. Node/Npm installed
