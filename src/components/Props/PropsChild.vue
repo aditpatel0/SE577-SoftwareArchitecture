@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
   <q-card class="my-card">
     <q-card-section>
       <div class="text-h6">Our Changing Planet - {{ title }}</div>

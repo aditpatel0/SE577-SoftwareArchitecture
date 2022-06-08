@@ -6,32 +6,17 @@ const routes: RouteRecordRaw[] = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '', component: () => import('pages/AppPages/Home.vue') },
-      { path: '/about', component: () => import('pages/AppPages/About.vue') },
-      {
-        path: '/about2',
-        component: () => import('pages/AppPages/AboutModular.vue'),
-      },
-      {
-        path: '/dynamic',
-        component: () => import('pages/AppPages/Dynamic.vue'),
-      },
-      {
-        path: '/props',
-        component: () => import('pages/AppPages/PropsPage.vue'),
-      },
-      {
-        path: '/simple_state',
-        component: () => import('pages/AppPages/StatePage.vue'),
-      },
-      {
-        path: '/bc_demo',
-        component: () => import('pages/AppPages/BCPage.vue'),
-      },
-      {
-        path: '/gh_demo',
-        component: () => import('pages/AppPages/GHPage.vue'),
-      },
+      { path: '/profile', component: () => import('pages/AppPages/ProfilePage.vue') },
+      { path: '/gist', component: () => import('pages/AppPages/GistPage.vue') },
+      { path: '/repositories', component: () => import('pages/AppPages/RepositoriyPage.vue') },
     ],
+  },
+
+  // Always leave this as last one,
+  // but you can also remove it
+  {
+    path: '/:catchAll(.*)*',
+    component: () => import('pages/ErrorNotFound.vue'),
   },
 ];
 

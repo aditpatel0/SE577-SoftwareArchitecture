@@ -1,6 +1,6 @@
 <template>
   <div class="q-pa-md">
-    <q-banner class="bg-primary text-white">
+    <q-banner class="bg-primary text-green">
       <h6>GitHubDemo</h6>
     </q-banner>
     <div class="row">
@@ -28,7 +28,7 @@ import axios from 'axios';
 type rowType = {
   id: string;
   name: string;
-  url: string;
+  html_url: string;
   language: string;
   updated_at: string;
 };
@@ -37,14 +37,15 @@ const columns = [
   { name: 'id', label: 'ID', align: 'left', field: 'id', sortable: true },
   { name: 'name', label: 'name', align: 'left', field: 'name', sortable: true },
   { name: 'url', label: 'URL', align: 'left', field: 'url', sortable: true },
+  { name: 'description', label: 'Description', align: 'left', field: 'description' },
   { name: 'language', label: 'Language', align: 'left', field: 'language' },
-  { name: 'updated_at', label: 'Updated', align: 'left', field: 'updated_at' },
+  { name: 'updated_at', label: 'Updated at', align: 'left', field: 'updated_at' },
 ];
 let rows = ref([] as rowType[]);
 
 onMounted(async () => {
   const res = await axios.get(
-    'https://api.github.com/users/architectingsoftware/repos'
+    'http://localhost:3000/repositories'
   );
 
   rows.value = [];
@@ -53,13 +54,13 @@ onMounted(async () => {
     const mappedRow: rowType = {
       id: row.id,
       name: row.name,
-      url: row.url,
+      url: row.html_url,
+      description: row.description,
       language: row.language,
       updated_at: row.updated_at,
     };
     return mappedRow;
   });
-  console.log('DEBUG', resList);
   rows.value = resList;
 });
 </script>

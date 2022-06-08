@@ -1,5 +1,1 @@
-
-A simple microservice to simulate listing repositories in git.
-Interface calls a service and render the results in the web interface.
-
-Please run npm install
+Please review Release4.md for thoughts on this step of the project journey.

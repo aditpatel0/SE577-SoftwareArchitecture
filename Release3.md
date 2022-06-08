@@ -1,9 +1,6 @@
 
 Lets talk architecture!
 
-Feedback:
-This term we dwelled deep into full-stack applications. The most challenging aspect was understanding backend capabilities needed.
-
 This application has two components to it
 
 1. The front end web application this utilizes the VUE framework coupled with Quasar. It also utilizes Typescript.
