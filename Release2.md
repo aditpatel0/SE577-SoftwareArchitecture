@@ -1,3 +1,4 @@
+Adit
 
 
 Rust was utilized for the backend microservice due to the benefits of high performance while ensuring memory safety and well as

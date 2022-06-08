@@ -1,0 +1,21 @@
+---
+  - name: repositoryone
+    id: 1
+    description: My first repository
+    stars: 1
+    link: https://github.com/aditpatel0/repositoryone
+    license: MIT
+
+  - name: repositorytwo
+    id: 2
+    description: My second repository
+    stars: 2
+    link: https://github.com/aditpatel0/repositorytwo
+    license: MIT
+
+  - name: repositorythree
+    id: 3
+    description: My third repository
+    stars: 3
+    link: https://github.com/aditpatel0/repositorythree
+    license: MIT
