@@ -6,33 +6,26 @@ const routes: RouteRecordRaw[] = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '', component: () => import('pages/AppPages/Home.vue') },
-      { path: '/about', component: () => import('pages/AppPages/About.vue') },
+      { path: '/login', component: () => import('pages/AppPages/About.vue') },
       {
-        path: '/about2',
+        path: '/about',
         component: () => import('pages/AppPages/AboutModular.vue'),
       },
       {
-        path: '/dynamic',
+        path: '/repositories',
         component: () => import('pages/AppPages/Dynamic.vue'),
       },
       {
-        path: '/props',
+        path: '/details',
         component: () => import('pages/AppPages/PropsPage.vue'),
-      },
-      {
-        path: '/simple_state',
-        component: () => import('pages/AppPages/StatePage.vue'),
-      },
-      {
-        path: '/bc_demo',
-        component: () => import('pages/AppPages/BCPage.vue'),
-      },
-      {
-        path: '/gh_demo',
-        component: () => import('pages/AppPages/GHPage.vue'),
       },
     ],
   },
-];
 
-export default routes;
+  // Always leave this as last one,
+  // but you can also remove it
+  {
+    path: '/:catchAll(.*)*',
+    component: () => import('pages/ErrorNotFound.vue'),
+  },
+];
